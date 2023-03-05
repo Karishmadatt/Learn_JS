@@ -34,3 +34,32 @@ console.log(Person.prototype.isPrototypeOf(test1));//true
 console.log(Person.prototype.isPrototypeOf(Person));//false
 Person.prototype.species = 'Homo Sapiens';
 console.log(test1.species);
+
+// coding challege - 1
+// 1. Use a constructor function to implement a Car. A car has a make and a speed property. The speed property is the current speed of the car in km/h;
+// 2. Implement an 'accelerate' method that will increase the car's speed by 10, and log the new speed to the console;
+// 3. Implement a 'brake' method that will decrease the car's speed by 5, and log the new speed to the console;
+// 4. Create 2 car objects and experiment with calling 'accelerate' and 'brake' multiple times on each of them.
+
+// DATA CAR 1: 'BMW' going at 120 km/h
+// DATA CAR 2: 'Mercedes' going at 95 km/h
+
+const Create = function(car,speed){
+    this.car = car;
+    this.speed = speed; 
+};
+
+Create.prototype.accelerate = function(){
+    console.log(this.speed+=10);
+    
+};
+
+Create.prototype.brake = function(){
+    console.log(this.speed-=5);
+};
+
+const d1 = new Create('BMW',120);
+const d2 = new Create('Mercedes',95);
+console.log(d1,d2);
+d1.accelerate();
+d2.brake();
