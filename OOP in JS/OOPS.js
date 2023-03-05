@@ -63,3 +63,30 @@ const d2 = new Create('Mercedes',95);
 console.log(d1,d2);
 d1.accelerate();
 d2.brake();
+
+//ES6 Classes 
+//class expression 
+// const personc1 = function(){}
+//class declaration
+class PersonC1{
+    constructor(name , Birthyear){
+        this.name = name;
+        this.Birthyear = Birthyear;
+    }
+
+    //method will be added to the .prototype property.
+    calage(){
+        console.log(2023 - this.Birthyear);
+    }
+    greet(){
+        console.log(`Hello ${this.name}`);
+    }
+}
+const Karishma = new PersonC1('Karishma',2000);
+Karishma.calage();
+Karishma.greet();
+
+//points about class
+// 1. Classes are not Hoisted
+// 2. Classes are first-class citizens.
+// 3. Classes are executed in strict mode.
