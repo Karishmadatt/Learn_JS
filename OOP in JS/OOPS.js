@@ -90,3 +90,22 @@ Karishma.greet();
 // 1. Classes are not Hoisted
 // 2. Classes are first-class citizens.
 // 3. Classes are executed in strict mode.
+
+//Getters and Setters
+
+const account = {
+    owner : 'Karishma',
+    Movement : [100,200,300,400],
+
+    get latest (){// used to read
+        return this.Movement.slice(-1).pop();
+    },
+
+    set latest(mov){//used to set 
+        return  this.Movement.push(mov);
+    }
+}
+
+console.log(account.latest);
+account.latest=50
+console.log(account.Movement);
