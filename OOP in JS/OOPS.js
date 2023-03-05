@@ -19,3 +19,18 @@ console.log(test1);
 // 3.{}  linkage to prototype 
 // 4. function automatically return {}.
 console.log(test1 instanceof Person);
+
+// prototype
+//Each object created by constructor class will now get access to all the methods of this prototype
+// property
+
+Person.prototype.calage = function(){
+    console.log(2023-this.Birthyear);
+}
+test1.calage();
+console.log(test1.__proto__);//JS set the protoproperty of objects to the prototype of constructor function.
+console.log(test1.__proto__ === Person.prototype);//true
+console.log(Person.prototype.isPrototypeOf(test1));//true
+console.log(Person.prototype.isPrototypeOf(Person));//false
+Person.prototype.species = 'Homo Sapiens';
+console.log(test1.species);
