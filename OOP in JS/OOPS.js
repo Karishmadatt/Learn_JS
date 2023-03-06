@@ -109,3 +109,20 @@ const account = {
 console.log(account.latest);
 account.latest=50
 console.log(account.Movement);
+
+
+//object.create
+
+const Personproto = {
+    init(name,birthyear){
+         this.name = name,
+         this.birthyear = birthyear;
+    },
+    calage(){
+        console.log(2023 - this.birthyear);
+    },
+};
+
+const karishma = Object.create(Personproto);
+karishma.init('Karishma',2000);
+karishma.calage();
